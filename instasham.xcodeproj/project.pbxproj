@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6226492025DAE6360019BD98 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6226491F25DAE6360019BD98 /* Extensions.swift */; };
 		629E438C25DA0CC200925767 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 629E438B25DA0CC200925767 /* GoogleService-Info.plist */; };
 		629E43A325DA103600925767 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629E43A225DA103600925767 /* DatabaseManager.swift */; };
 		629E43A625DA10C400925767 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629E43A525DA10C400925767 /* AuthManager.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		070D1945BA33F4C7EAD35121 /* Pods-instasham.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instasham.debug.xcconfig"; path = "Target Support Files/Pods-instasham/Pods-instasham.debug.xcconfig"; sourceTree = "<group>"; };
+		6226491F25DAE6360019BD98 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		629E438B25DA0CC200925767 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		629E43A225DA103600925767 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		629E43A525DA10C400925767 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				629E43A225DA103600925767 /* DatabaseManager.swift */,
 				629E43A525DA10C400925767 /* AuthManager.swift */,
 				629E43A825DA111500925767 /* StorageManager.swift */,
+				6226491F25DAE6360019BD98 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				62D1EEB625D8CC97007A916B /* NotificationsViewController.swift in Sources */,
 				62D1EED525D8CD70007A916B /* SearchResultViewController.swift in Sources */,
 				62D1EEC025D8CCF5007A916B /* LoginViewController.swift in Sources */,
+				6226492025DAE6360019BD98 /* Extensions.swift in Sources */,
 				62D1EED225D8CD68007A916B /* SearchViewController.swift in Sources */,
 				62D1EEB925D8CCA0007A916B /* ProfileViewController.swift in Sources */,
 				629E43A625DA10C400925767 /* AuthManager.swift in Sources */,
