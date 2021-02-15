@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		629E438C25DA0CC200925767 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 629E438B25DA0CC200925767 /* GoogleService-Info.plist */; };
+		629E43A325DA103600925767 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629E43A225DA103600925767 /* DatabaseManager.swift */; };
+		629E43A625DA10C400925767 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629E43A525DA10C400925767 /* AuthManager.swift */; };
+		629E43A925DA111500925767 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629E43A825DA111500925767 /* StorageManager.swift */; };
 		62D1EE9525D8CB38007A916B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D1EE9425D8CB38007A916B /* AppDelegate.swift */; };
 		62D1EE9725D8CB38007A916B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D1EE9625D8CB38007A916B /* SceneDelegate.swift */; };
 		62D1EE9925D8CB38007A916B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D1EE9825D8CB38007A916B /* HomeViewController.swift */; };
@@ -27,9 +31,15 @@
 		62D1EED525D8CD70007A916B /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D1EED425D8CD70007A916B /* SearchResultViewController.swift */; };
 		62D1EED825D8CD8D007A916B /* PostEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D1EED725D8CD8D007A916B /* PostEditorViewController.swift */; };
 		62D1EEDB25D8CD9B007A916B /* PublishPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D1EEDA25D8CD9B007A916B /* PublishPostViewController.swift */; };
+		D084C29A30C71600CF53B573 /* Pods_instasham.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2BEE1D4C6FF205BDD657439 /* Pods_instasham.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		070D1945BA33F4C7EAD35121 /* Pods-instasham.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instasham.debug.xcconfig"; path = "Target Support Files/Pods-instasham/Pods-instasham.debug.xcconfig"; sourceTree = "<group>"; };
+		629E438B25DA0CC200925767 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		629E43A225DA103600925767 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		629E43A525DA10C400925767 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		629E43A825DA111500925767 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		62D1EE9125D8CB38007A916B /* instasham.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instasham.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62D1EE9425D8CB38007A916B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62D1EE9625D8CB38007A916B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +62,8 @@
 		62D1EED425D8CD70007A916B /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		62D1EED725D8CD8D007A916B /* PostEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEditorViewController.swift; sourceTree = "<group>"; };
 		62D1EEDA25D8CD9B007A916B /* PublishPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishPostViewController.swift; sourceTree = "<group>"; };
+		D0013B6B666CE14641B5B660 /* Pods-instasham.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instasham.release.xcconfig"; path = "Target Support Files/Pods-instasham/Pods-instasham.release.xcconfig"; sourceTree = "<group>"; };
+		D2BEE1D4C6FF205BDD657439 /* Pods_instasham.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instasham.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,17 +71,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D084C29A30C71600CF53B573 /* Pods_instasham.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		629E43A025DA0FA500925767 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				62D1EEC525D8CD16007A916B /* PostViewController.swift */,
+				62D1EEC825D8CD34007A916B /* EditProfileViewController.swift */,
+				62D1EECB25D8CD3C007A916B /* SettingsViewController.swift */,
+				62D1EECE25D8CD4B007A916B /* ListViewController.swift */,
+				62D1EED125D8CD68007A916B /* SearchViewController.swift */,
+				62D1EED425D8CD70007A916B /* SearchResultViewController.swift */,
+				62D1EED725D8CD8D007A916B /* PostEditorViewController.swift */,
+				62D1EEDA25D8CD9B007A916B /* PublishPostViewController.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
 		62D1EE8825D8CB38007A916B = {
 			isa = PBXGroup;
 			children = (
 				62D1EE9325D8CB38007A916B /* instasham */,
 				62D1EE9225D8CB38007A916B /* Products */,
+				7BE222EAA8E63BAD4E170843 /* Pods */,
+				99C31D22CB88721E0B4AC218 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,8 +144,12 @@
 		62D1EEAB25D8CB8D007A916B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				629E438B25DA0CC200925767 /* GoogleService-Info.plist */,
 				62D1EE9425D8CB38007A916B /* AppDelegate.swift */,
 				62D1EE9625D8CB38007A916B /* SceneDelegate.swift */,
+				629E43A225DA103600925767 /* DatabaseManager.swift */,
+				629E43A525DA10C400925767 /* AuthManager.swift */,
+				629E43A825DA111500925767 /* StorageManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -152,14 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				62D1EEBE25D8CCED007A916B /* Onboarding */,
-				62D1EEC525D8CD16007A916B /* PostViewController.swift */,
-				62D1EEC825D8CD34007A916B /* EditProfileViewController.swift */,
-				62D1EECB25D8CD3C007A916B /* SettingsViewController.swift */,
-				62D1EECE25D8CD4B007A916B /* ListViewController.swift */,
-				62D1EED125D8CD68007A916B /* SearchViewController.swift */,
-				62D1EED425D8CD70007A916B /* SearchResultViewController.swift */,
-				62D1EED725D8CD8D007A916B /* PostEditorViewController.swift */,
-				62D1EEDA25D8CD9B007A916B /* PublishPostViewController.swift */,
+				629E43A025DA0FA500925767 /* General */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -173,6 +200,23 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		7BE222EAA8E63BAD4E170843 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				070D1945BA33F4C7EAD35121 /* Pods-instasham.debug.xcconfig */,
+				D0013B6B666CE14641B5B660 /* Pods-instasham.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		99C31D22CB88721E0B4AC218 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2BEE1D4C6FF205BDD657439 /* Pods_instasham.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,9 +224,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62D1EEA525D8CB39007A916B /* Build configuration list for PBXNativeTarget "instasham" */;
 			buildPhases = (
+				24D5A80728E784F20E8493CC /* [CP] Check Pods Manifest.lock */,
 				62D1EE8D25D8CB38007A916B /* Sources */,
 				62D1EE8E25D8CB38007A916B /* Frameworks */,
 				62D1EE8F25D8CB38007A916B /* Resources */,
+				663B86084909F8516388C29B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,12 +277,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				62D1EEA125D8CB39007A916B /* LaunchScreen.storyboard in Resources */,
+				629E438C25DA0CC200925767 /* GoogleService-Info.plist in Resources */,
 				62D1EE9E25D8CB39007A916B /* Assets.xcassets in Resources */,
 				62D1EE9C25D8CB38007A916B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24D5A80728E784F20E8493CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-instasham-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		663B86084909F8516388C29B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-instasham/Pods-instasham-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-instasham/Pods-instasham-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-instasham/Pods-instasham-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		62D1EE8D25D8CB38007A916B /* Sources */ = {
@@ -250,12 +339,15 @@
 				62D1EE9925D8CB38007A916B /* HomeViewController.swift in Sources */,
 				62D1EEC325D8CCFB007A916B /* RegistrationViewController.swift in Sources */,
 				62D1EED825D8CD8D007A916B /* PostEditorViewController.swift in Sources */,
+				629E43A925DA111500925767 /* StorageManager.swift in Sources */,
 				62D1EEC625D8CD16007A916B /* PostViewController.swift in Sources */,
+				629E43A325DA103600925767 /* DatabaseManager.swift in Sources */,
 				62D1EEB625D8CC97007A916B /* NotificationsViewController.swift in Sources */,
 				62D1EED525D8CD70007A916B /* SearchResultViewController.swift in Sources */,
 				62D1EEC025D8CCF5007A916B /* LoginViewController.swift in Sources */,
 				62D1EED225D8CD68007A916B /* SearchViewController.swift in Sources */,
 				62D1EEB925D8CCA0007A916B /* ProfileViewController.swift in Sources */,
+				629E43A625DA10C400925767 /* AuthManager.swift in Sources */,
 				62D1EE9525D8CB38007A916B /* AppDelegate.swift in Sources */,
 				62D1EE9725D8CB38007A916B /* SceneDelegate.swift in Sources */,
 				62D1EECF25D8CD4B007A916B /* ListViewController.swift in Sources */,
@@ -403,6 +495,7 @@
 		};
 		62D1EEA625D8CB39007A916B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 070D1945BA33F4C7EAD35121 /* Pods-instasham.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -422,6 +515,7 @@
 		};
 		62D1EEA725D8CB39007A916B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0013B6B666CE14641B5B660 /* Pods-instasham.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

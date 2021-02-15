@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>978172691472-sagu8ooovtqv5emhh4rtel7ingioq59i.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.978172691472-sagu8ooovtqv5emhh4rtel7ingioq59i</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA4-qn_MndhMU0zV8pw5CEZN6M0163HxAQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>978172691472</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.bentincher.instasham</string>
+	<key>PROJECT_ID</key>
+	<string>instasham-1ed44</string>
+	<key>STORAGE_BUCKET</key>
+	<string>instasham-1ed44.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:978172691472:ios:e7ed412250ca4ad3f47695</string>
+</dict>
+</plist>
