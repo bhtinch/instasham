@@ -158,6 +158,30 @@ class LoginViewController: UIViewController {
               let password = passwordField.text, !password.isEmpty, password.count >= 8 else { return }
         
         // loging functinality
+        var username: String?
+        var email: String?
+        
+        if usernameEmail.contains("@"), usernameEmail.contains(".") {
+            //  email
+            email = usernameEmail
+        } else {
+            //  username
+            username = usernameEmail
+        }
+        
+        AuthManager.shared.loginUser(username: username, email: email, password: password) { (success) in
+            DispatchQueue.main.async {
+                if success {
+                    //  user logged in
+                    self.dismiss(animated: true, completion: nil)
+                } else {
+                    //  error occurred
+                    let alert = UIAlertController(title: "Log In Error", message: "Unable to login", preferredStyle: .alert)
+                    alert.addAction((UIAlertAction(title: "Dismss", style: .cancel, handler: nil)))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+        }
     }
 
     @objc private func didTapPrivacyButton() {
@@ -176,7 +200,9 @@ class LoginViewController: UIViewController {
     
     @objc private func didTapCreateAccountButton() {
         let vc = RegistrationViewController()
-        present(vc, animated: true, completion: nil)
+        vc.title = "Create Account"
+        
+        present(UINavigationController(rootViewController: vc), animated: true, completion: nil)
     }
     
 }
