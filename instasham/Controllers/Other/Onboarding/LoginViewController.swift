@@ -4,7 +4,7 @@
 //
 //  Created by Benjamin Tincher on 2/13/21.
 //
-
+import SafariServices
 import UIKit
 
 class LoginViewController: UIViewController {
@@ -150,13 +150,34 @@ class LoginViewController: UIViewController {
         view.addSubview(createAccountButton)
     }
     
-    @objc private func didTapLoginButton() {}
+    @objc private func didTapLoginButton() {
+        passwordField.resignFirstResponder()
+        usernameEmailField.resignFirstResponder()
+        
+        guard let usernameEmail = usernameEmailField.text, !usernameEmail.isEmpty,
+              let password = passwordField.text, !password.isEmpty, password.count >= 8 else { return }
+        
+        // loging functinality
+    }
 
-    @objc private func didTapTermsButton() {}
+    @objc private func didTapPrivacyButton() {
+        
+        guard let url = URL(string: "https://help.instagram.com/519522125107875") else { return }
+        let vc = SFSafariViewController(url: url)
+        present(vc, animated: true, completion: nil)
+    }
     
-    @objc private func didTapPrivacyButton() {}
+    @objc private func didTapTermsButton() {
+        
+        guard let url = URL(string: "https://help.instagram.com/1215086795543252") else { return }
+        let vc = SFSafariViewController(url: url)
+        present(vc, animated: true, completion: nil)
+    }
     
-    @objc private func didTapCreateAccountButton() {}
+    @objc private func didTapCreateAccountButton() {
+        let vc = RegistrationViewController()
+        present(vc, animated: true, completion: nil)
+    }
     
 }
 
