@@ -78,6 +78,10 @@ class RegistrationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        usernameField.delegate = self
+        emailField.delegate = self
+        passwordField.delegate = self
+        registerButton.addTarget(self, action: #selector(didTapRegisterButton), for: .touchUpInside)
         view.addSubview(usernameField)
         view.addSubview(emailField)
         view.addSubview(passwordField)
@@ -89,7 +93,7 @@ class RegistrationViewController: UIViewController {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        registerButton.addTarget(self, action: #selector(didTapRegisterButton), for: .touchUpInside)
+        
         
         usernameField.frame = CGRect(x: 20, y: view.safeAreaInsets.top+100, width: view.width-40, height: 48)
         emailField.frame = CGRect(x: 20, y: usernameField.bottom+10, width: view.width-40, height: 48)
@@ -98,6 +102,35 @@ class RegistrationViewController: UIViewController {
     }
     
     @objc private func didTapRegisterButton() {
+        passwordField.resignFirstResponder()
+        usernameField.resignFirstResponder()
+        emailField.resignFirstResponder()
         
+        guard let email = emailField.text, !email.isEmpty,
+              let password = passwordField.text, !password.isEmpty, password.count >= 8,
+        let username = usernameField.text, !username.isEmpty else { return }
+        
+        AuthManager.shared.registerNewUserWith(username: username, email: email, password: password) { (registered) in
+            DispatchQueue.main.async {
+                if registered {
+                    //  successfully registered
+                } else {
+                    //  failure occured - present alert
+                }
+            }
+        }
+    }
+}
+
+extension RegistrationViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == usernameField {
+            emailField.becomeFirstResponder()
+        } else if textField == passwordField {
+            passwordField.becomeFirstResponder()
+        } else {
+            didTapRegisterButton()
+        }
+        return true
     }
 }
