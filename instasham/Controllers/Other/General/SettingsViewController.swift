@@ -50,22 +50,6 @@ final class SettingsViewController: UIViewController {
     
     private func didTapLogOut() {
         
-//        AuthManager.shared.logoutUser { (loggedOut) in
-//            DispatchQueue.main.async {
-//                if loggedOut {
-//                    let loginVC = LoginViewController()
-//                    loginVC.modalPresentationStyle = .fullScreen
-//                    self.present(loginVC, animated: false) {
-//                        self.navigationController?.popToRootViewController(animated: false)
-//                        self.tabBarController?.selectedIndex = 0
-//                    }
-//                } else {
-//                    //  error occurred
-//                    fatalError("Could not log out user")
-//                }
-//            }
-//        }
-        
         let actionSheet = UIAlertController(title: "Log Out", message: "Are you sure you want to log out?", preferredStyle: .actionSheet)
 
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
